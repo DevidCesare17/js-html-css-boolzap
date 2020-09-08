@@ -41,6 +41,10 @@ body{
 .d_none{
   display: none;
 }
+
+.bgcolor_grey{
+  background-color: #E9EBEB;
+}
 /* /GENERAL */
 
 /* SFONDO / BACKGROUND */
@@ -151,6 +155,24 @@ body{
   background-color: #ffffff;
   overflow-y: scroll;
 }
+
+.name_user{
+  display: flex;
+  align-items: center;
+}
+.name_user img{
+  margin-right: 20px;
+}
+
+.name_user_n_lastmsg h4{
+  font-size: 18px;
+}
+.name_user_n_lastmsg p{
+  font-size: 14px;
+  font-weight: 300;
+  color: #B1B1B1;
+  margin-top: 3px;
+}
   /* /lista utenti */
 /* /sezione contatti */
 
@@ -169,6 +191,28 @@ body{
 .chat_bgrnd{
   height: calc(100% - 160px);
   background-image: url('../img/mine.jpg');
+  overflow-y: scroll;
+}
+
+.msg_msg{
+  position: relative;
+  border-radius: 10px;
+  width: max-content;
+  padding: 10px 40px 20px 10px;
+}
+.hour_send{
+  position: absolute;
+  bottom: 0;
+  right: 3%;
+  color: #EAEAEA;
+  font-size: 10px;
+}
+
+.msg_green{
+  background-color: #D5F9BA;
+}
+.msg_white{
+  background-color: #ffffff;
 }
   /* /contenuto chat */
 
@@ -178,10 +222,19 @@ body{
   background-color: #F3EEEA;
   padding: 15px 10px;
 }
-
 .writing_chat i{
   font-size: 26px;
   color: #6B7376;
+}
+
+.img_user{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 20px;
+}
+.img_user img{
+  margin-right: 20px;
 }
 
 .msg_wrtn{
