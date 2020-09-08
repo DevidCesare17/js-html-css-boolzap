@@ -1,0 +1,200 @@
+/* GENERAL */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+.same_height{
+  height: 80px;
+}
+
+.list_inline li{
+  list-style: none;
+  display: inline;
+}
+.list_inline li>a{
+  font-size: 24px;
+  color: #B1B1B1;
+  text-decoration: none;
+}
+.list_inline li:not(:first-of-type){
+  padding-left: 20px;
+}
+
+.img_circle{
+  border-radius: 50%;
+  height: 60px;
+}
+
+.d_flex_pad{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.d_none{
+  display: none;
+}
+/* /GENERAL */
+
+/* SFONDO / BACKGROUND */
+.sfondo{
+  position: relative;
+  height: 100vh;
+}
+
+.bgrnd_green{
+  background-color: #009688;
+  height: 120px;
+}
+.bgrnd_grey{
+  background-color: #D2DBDB;
+  height: calc(100% - 120px);
+}
+/* /SFONDO / BACKGROUND */
+
+/* LAYOUT MESSAGGISTICA */
+.boolzap_messenger{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90vh;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* sezione contatti */
+.contacts{
+  width: 40%;
+}
+
+  /* profilo */
+.profile_boolzap{
+  background-color: #EAEAEA;
+}
+  /* /profilo */
+
+  /* notifiche */
+.activate_notify{
+  display: flex;
+  padding: 20px;
+  background-color: #8EDAFC;
+  align-items: center;
+}
+.icon_notify{
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  margin-right: 20px;
+}
+.icon_notify i{
+  font-size: 26px;
+  color: #8EDAFC;
+  padding: 15px;
+}
+
+.alert_notify>p{
+  font-weight: 500;
+}
+.alert_notify>a{
+  color: #4F7485;
+  font-size: 14px;
+}
+  /* /notifiche */
+
+  /* cerca */
+.search_users{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #FAFAFA;
+  padding: 10px;
+}
+
+.icon_search{
+  width: 15%;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.icon_search>i{
+  color: #B1B1B1;
+}
+
+.input_searching{
+  width: 85%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-size: 14px;
+}
+.input_searching::placeholder{
+  color: #B1B1B1;
+  padding: 10px;
+}
+  /* /cerca */
+
+  /* lista utenti */
+.users_list{
+  height: calc(100% - 220px);
+  background-color: #ffffff;
+  overflow-y: scroll;
+}
+  /* /lista utenti */
+/* /sezione contatti */
+
+/* sezione chat */
+.boolzap_msg{
+  width: 60%;
+  border-left: 1px solid #B1B1B1;
+}
+  /* info user */
+.user_info{
+  background-color: #EAEAEA;
+}
+  /* /info user */
+
+  /* contenuto chat */
+.chat_bgrnd{
+  height: calc(100% - 160px);
+  background-image: url('../img/mine.jpg');
+}
+  /* /contenuto chat */
+
+  /* scrittura e invio */
+.writing_chat{
+  justify-content: space-around;
+  background-color: #F3EEEA;
+  padding: 15px 10px;
+}
+
+.writing_chat i{
+  font-size: 26px;
+  color: #6B7376;
+}
+
+.msg_wrtn{
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.msg_wrtn::placeholder{
+  color: #B1B1B1;
+  padding: 10px;
+}
+  /* /scrittura e invio */
+/* /sezione chat */
+/* /LAYOUT MESSAGGISTICA */

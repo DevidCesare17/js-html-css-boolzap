@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boolzap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- SFONDO E BACKGROUND -->
+    <div class="sfondo">
+      <div class="bgrnd_green"></div>
+      <div class="bgrnd_grey"></div>
+
+      <!-- LAYOUT MESSAGGISTICA -->
+      <div class="boolzap_messenger">
+        <!-- SEZIONE CONTATTI -->
+        <section class="contacts">
+          <!-- profilo -->
+          <div class="profile_boolzap same_height d_flex_pad">
+            <div class="profile_img">
+              <img class="img_circle" src="img/avatar_io.jpg" alt="Immagine profilo">
+            </div>
+            <div class="icon_settings">
+              <ul class="list_inline">
+                <li>
+                  <a href="#">
+                    <i class="fas fa-circle-notch"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-comment-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /profilo -->
+          <!-- notifiche -->
+          <div class="activate_notify same_height">
+            <div class="icon_notify">
+              <i class="fas fa-bell-slash"></i>
+            </div>
+            <div class="alert_notify">
+              <p>Ricevi notifiche di nuovi messaggi</p>
+              <a href="#">Attiva notifiche desktop</a>
+            </div>
+          </div>
+          <!-- /notifiche -->
+          <!-- cerca -->
+          <div class="search_users">
+            <a class="icon_search" href="#">
+              <i class="fas fa-search"></i>
+            </a>
+            <input class="input_searching" type="text" name="search" value="" placeholder="Cerca o inizia una nuova chat">
+          </div>
+          <!-- /cerca -->
+
+          <!-- lista utenti -->
+            <div class="users_list">
+
+            </div>
+          <!-- /lista utenti -->
+        </section>
+        <!-- /SEZIONE CONTATTI -->
+
+        <!-- SEZIONE CHAT -->
+        <section class="boolzap_msg">
+          <!-- info user -->
+          <div class="user_info d_flex_pad same_height">
+            <div class="img_user">
+              <img class="img_circle" src="img/avatar_1.jpg" alt="Immagine Utente">
+            </div>
+            <div class="access_user">
+              <p class="user_name"></p>
+              <p class="last_online"></p>
+            </div>
+            <ul class="list_inline">
+              <li>
+                <a href="#">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-paperclip"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-ellipsis-v"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- /info user -->
+
+          <!-- contenuto chat -->
+          <div class="chat_bgrnd">
+
+          </div>
+          <!-- /contenuto chat -->
+
+          <!-- scrittura e invio -->
+          <div class="writing_chat d_flex_pad same_height">
+            <a class="emoticon" href="#">
+              <i class="far fa-smile"></i>
+            </a>
+            <input class="msg_wrtn" type="text" name="write" value="" placeholder="Scrivi un messaggio">
+            <a class="msg_send" href="#">
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-paper-plane d_none"></i>
+            </a>
+          </div>
+          <!-- /scrittura e invio -->
+        </section>
+        <!-- /SEZIONE CHAT -->
+      </div>
+      <!-- /LAYOUT MESSAGGISTICA -->
+    </div>
+    <!-- /SFONDO E BACKGROUND -->
+
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
