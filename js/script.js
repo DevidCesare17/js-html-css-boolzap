@@ -34,7 +34,9 @@ $(document).ready(function () {
   $(".fas.fa-paper-plane").click(
     function () {
       sendMessage();
+      setTimeout(isWriting, 1000);
       setTimeout(receiveMessage, 2000);
+      setTimeout(lastAccess, 2500);
       $(".fas.fa-microphone").removeClass("d_none");
       $(".fas.fa-paper-plane").addClass("d_none");
     }
@@ -45,9 +47,9 @@ $(document).ready(function () {
     function(e) {
       if (e.which == 13) {
         sendMessage();
-        setInterval(isWriting, 0000);
+        setTimeout(isWriting, 1000);
         setTimeout(receiveMessage, 2000);
-        clearTimeout();
+        setTimeout(lastAccess, 2500);
       }
     }
   );
@@ -94,17 +96,40 @@ $(document).ready(function () {
   }
 
     // function setting ricevi messaggio da parte dello user chat corrente
+  var answerUser = "Ok";
   function receiveMessage () {
     var receiveMsg = $(".templates .msg_row").clone();
-    receiveMsg.find(".msg_text").text("Ok");
+    receiveMsg.find(".msg_text").text(answerUser);
     receiveMsg.find(".hour_send").text(time());
     receiveMsg.find(".msg_msg").addClass("msg_white");
     $(".chat").append(receiveMsg);
+    lastHour();
+    miniMsg();
   }
 
+    // function "utente sta scrivendo"
   function isWriting () {
     var writeAMessage = $(".user_is_writing");
     writeAMessage.find(".last_online").text("Sta scrivendo...");
+    return writeAMessage;
+  }
+
+    // function "ultimo accesso alle"
+  function lastAccess () {
+    var lastAcss = $(".user_is_writing");
+    lastAcss.find(".last_online").text("Ultimo accesso alle " + time());
+  }
+
+  function lastHour () {
+    var lastHour = $(".hour_msg");
+    lastHour.find("small").text(time());
+    return lastHour;
+  }
+
+  function miniMsg () {
+    var miniMsg = $(".name_user_n_lastmsg");
+    miniMsg.find("p").text(answerUser);
+    return miniMsg;
   }
 
 });
