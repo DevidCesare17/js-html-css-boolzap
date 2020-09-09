@@ -29,6 +29,7 @@ body{
 .img_circle{
   border-radius: 50%;
   height: 60px;
+  overflow: hidden;
 }
 
 .d_flex_pad{
@@ -69,8 +70,8 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 90vh;
-  width: 70%;
+  height: 95vh;
+  width: 80%;
   margin: auto;
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -142,10 +143,10 @@ body{
   border: 1px solid rgba(0, 0, 0, 0.1);
   outline: none;
   font-size: 14px;
+  padding: 10px;
 }
 .input_searching::placeholder{
   color: #B1B1B1;
-  padding: 10px;
 }
   /* /cerca */
 
@@ -164,6 +165,10 @@ body{
   margin-right: 20px;
 }
 
+.user_n_im_i:not(:last-child){
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .name_user_n_lastmsg h4{
   font-size: 18px;
 }
@@ -172,6 +177,12 @@ body{
   font-weight: 300;
   color: #B1B1B1;
   margin-top: 3px;
+}
+
+.hour_msg{
+  align-self: flex-start;
+  font-size: 14px;
+  color: #B1B1B1;
 }
   /* /lista utenti */
 /* /sezione contatti */
@@ -185,6 +196,21 @@ body{
 .user_info{
   background-color: #EAEAEA;
 }
+
+.img_user{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.img_user img{
+  margin-right: 20px;
+}
+
+.last_online{
+  font-size: 14px;
+  color: #B1B1B1;
+}
+
   /* /info user */
 
   /* contenuto chat */
@@ -192,27 +218,7 @@ body{
   height: calc(100% - 160px);
   background-image: url('../img/mine.jpg');
   overflow-y: scroll;
-}
-
-.msg_msg{
-  position: relative;
-  border-radius: 10px;
-  width: max-content;
-  padding: 10px 40px 20px 10px;
-}
-.hour_send{
-  position: absolute;
-  bottom: 0;
-  right: 3%;
-  color: #EAEAEA;
-  font-size: 10px;
-}
-
-.msg_green{
-  background-color: #D5F9BA;
-}
-.msg_white{
-  background-color: #ffffff;
+  padding: 50px;
 }
   /* /contenuto chat */
 
@@ -227,27 +233,51 @@ body{
   color: #6B7376;
 }
 
-.img_user{
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-right: 20px;
-}
-.img_user img{
-  margin-right: 20px;
-}
-
 .msg_wrtn{
   width: 80%;
   height: 100%;
   outline: none;
   border: none;
   border-radius: 5px;
+  padding: 10px;
 }
 .msg_wrtn::placeholder{
   color: #B1B1B1;
-  padding: 10px;
 }
   /* /scrittura e invio */
 /* /sezione chat */
 /* /LAYOUT MESSAGGISTICA */
+
+/* TEMPLATE */
+.templates{
+  display: none;
+}
+
+.msg_row{
+  display: flex;
+  margin: 10px 0;
+}
+
+.msg_msg{
+  position: relative;
+  border-radius: 10px;
+  max-width: 50%;
+  word-break: break-all;
+  padding: 10px 40px 20px 10px;
+}
+.hour_send{
+  position: absolute;
+  bottom: 0;
+  right: 3%;
+  color: #6B7376;
+  font-size: 10px;
+}
+
+.msg_green{
+  background-color: #D5F9BA;
+  margin-left: auto;
+}
+.msg_white{
+  background-color: #ffffff;
+}
+/* /TEMPLATE */

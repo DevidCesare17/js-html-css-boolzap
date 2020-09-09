@@ -59,9 +59,9 @@
           <!-- /notifiche -->
           <!-- cerca -->
           <div class="search_users">
-            <a class="icon_search" href="#">
+            <label class="icon_search" for="search">
               <i class="fas fa-search"></i>
-            </a>
+            </label>
             <input class="input_searching" type="text" name="search" value="" placeholder="Cerca o inizia una nuova chat">
           </div>
           <!-- /cerca -->
@@ -80,6 +80,97 @@
                   <small></small>
                 </div>
               </div>
+
+              <div class="user_n_im_i same_height d_flex_pad">
+                <div class="name_user">
+                  <img class="img_circle" src="img/avatar_2.jpg" alt="Immagine Utente">
+                  <div class="name_user_n_lastmsg">
+                    <h4>Fabio</h4>
+                    <p>lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="hour_msg">
+                  <small></small>
+                </div>
+              </div>
+
+              <div class="user_n_im_i same_height d_flex_pad">
+                <div class="name_user">
+                  <img class="img_circle" src="img/avatar_3.jpg" alt="Immagine Utente">
+                  <div class="name_user_n_lastmsg">
+                    <h4>Samuele</h4>
+                    <p>lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="hour_msg">
+                  <small></small>
+                </div>
+              </div>
+
+              <div class="user_n_im_i same_height d_flex_pad">
+                <div class="name_user">
+                  <img class="img_circle" src="img/avatar_4.jpg" alt="Immagine Utente">
+                  <div class="name_user_n_lastmsg">
+                    <h4>Alessandro B.</h4>
+                    <p>lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="hour_msg">
+                  <small></small>
+                </div>
+              </div>
+
+              <div class="user_n_im_i same_height d_flex_pad">
+                <div class="name_user">
+                  <img class="img_circle" src="img/avatar_5.jpg" alt="Immagine Utente">
+                  <div class="name_user_n_lastmsg">
+                    <h4>Alessandro L.</h4>
+                    <p>lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="hour_msg">
+                  <small></small>
+                </div>
+              </div>
+
+              <div class="user_n_im_i same_height d_flex_pad">
+                <div class="name_user">
+                  <img class="img_circle" src="img/avatar_6.jpg" alt="Immagine Utente">
+                  <div class="name_user_n_lastmsg">
+                    <h4>Claudia</h4>
+                    <p>lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="hour_msg">
+                  <small></small>
+                </div>
+              </div>
+
+              <div class="user_n_im_i same_height d_flex_pad">
+                <div class="name_user">
+                  <img class="img_circle" src="img/avatar_7.jpg" alt="Immagine Utente">
+                  <div class="name_user_n_lastmsg">
+                    <h4>Davide</h4>
+                    <p>lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="hour_msg">
+                  <small></small>
+                </div>
+              </div>
+
+              <div class="user_n_im_i same_height d_flex_pad">
+                <div class="name_user">
+                  <img class="img_circle" src="img/avatar_8.jpg" alt="Immagine Utente">
+                  <div class="name_user_n_lastmsg">
+                    <h4>Federico</h4>
+                    <p>lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="hour_msg">
+                  <small></small>
+                </div>
+              </div>
             </div>
           <!-- /lista utenti -->
         </section>
@@ -89,12 +180,12 @@
         <section class="boolzap_msg">
           <!-- info user -->
           <div class="user_info d_flex_pad same_height">
-
-              <!-- <img class="img_circle" src="" alt="Immagine Utente"> -->
-
             <div class="img_user access_user">
-              <p class="user_name"></p>
-              <p class="last_online"></p>
+              <img class="img_circle" src="img/avatar_1.jpg" alt="">
+              <div class="user_is_writing">
+                <h4 class="user_name">Michele</h4>
+                <p class="last_online"></p>
+              </div>
             </div>
             <ul class="list_inline">
               <li>
@@ -117,10 +208,8 @@
           <!-- /info user -->
 
           <!-- contenuto chat -->
-          <div class="chat_bgrnd">
-            <div class="msg_msg d_none">
-              <small class="hour_send"></small>
-            </div>
+          <div class="chat chat_bgrnd">
+
           </div>
           <!-- /contenuto chat -->
 
@@ -142,6 +231,17 @@
       <!-- /LAYOUT MESSAGGISTICA -->
     </div>
     <!-- /SFONDO E BACKGROUND -->
+
+    <!-- TEMPLATE -->
+    <div class="templates">
+      <div class="msg_row">
+        <div class="msg_msg">
+          <p class="msg_text"></p>
+          <small class="hour_send"></small>
+        </div>
+      </div>
+    </div>
+    <!-- /TEMPLATE -->
 
     <script src="js/script.js" charset="utf-8"></script>
   </body>
