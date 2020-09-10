@@ -293,7 +293,6 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 .msg_info_list{
   position: absolute;
-  display: none;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -303,6 +302,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   padding: 10px;
+  z-index: 1;
 }
 
 .msg_info_list ul>li{
@@ -315,5 +315,15 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 .msg_info_list ul>li>a{
   text-decoration: none;
+  color: #000000;
+}
+
+.msg_msg:hover .info_delete_msg{
+  display: block;
+  cursor: pointer;
+}
+
+.msg_info_list li>a:hover{
+  background-color: #B1B1B1;
 }
 /* /TEMPLATE */

@@ -1,27 +1,23 @@
 $(document).ready(function () {
 
   // EFFETTO HOVER UTENTI
-  $(".user_n_im_i").mouseover(
+  $(".user_n_im_i").hover(
     function () {
-      $(this).addClass("bgcolor_grey");
-    }
-  );
-  $(".user_n_im_i").mouseleave(
-    function () {
-      $(this).removeClass("bgcolor_grey");
+      $(this).toggleClass("bgcolor_grey");
     }
   );
 
-  $(".user_n_im_i").click(
-    function () {
-      // var userImg = $(".name_user > img").clone();
-      // userImg.find(".user_info .img_user > img").text();
 
-      $(this).clone(".name_user_n_lastmsg > h4");
-      var userName = $(".name_user_n_lastmsg > h4");
-      userName.find(".user_is_writing .user_name").text($(this));
-    }
-  );
+  // $(".user_n_im_i").click(
+  //   function () {
+  //     // var userImg = $(".name_user > img").clone();
+  //     // userImg.find(".user_info .img_user > img").text();
+  //
+  //     $(this).clone(".name_user_n_lastmsg > h4");
+  //     var userName = $(".name_user_n_lastmsg > h4");
+  //     userName.find(".user_is_writing .user_name").text($(this));
+  //   }
+  // );
 
   // AL CLICK SULLA INPUT MSG VISUALIZZO "BUTTON" INVIO E RIMUOVO "BUTTON" MICROFONO
   $(".msg_wrtn").click(
@@ -61,15 +57,21 @@ $(document).ready(function () {
       var valueSearch = $(this).val().toLowerCase();
       $(".users_list .user_n_im_i").filter(
         function () {
-          $(this).toggle($(this).text().toLowerCase().indexOf(valueSearch) > 0  );
+          $(this).toggle($(this).text().toLowerCase().indexOf(valueSearch) > -1);
         });
     }
   );
 
   // INFO O CANCELLA MESSAGGIO
-  $(".msg_msg").hover(
+  $(document).on("click", ".info_delete_msg",
     function () {
-      $(".info_delete_msg").toggle();
+      $(this).parent(".msg_msg").find(".msg_info_list").toggleClass("d_none");
+    }
+  );
+
+  $(document).on("click", ".delete_msg_inst",
+    function () {
+      $(this).parents(".msg_msg").remove();
     }
   );
 
