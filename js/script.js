@@ -4,7 +4,10 @@ $(document).ready(function () {
 
   $(".user_n_im_i").click(
     function () {
-      // $(this).toggleClass("bgcolor_grey");
+      $(".user_n_im_i").removeClass("bgcolor_grey");
+      $(this).addClass("bgcolor_grey");
+      $(".user_n_im_i").removeClass("contact_active");
+      $(this).addClass("contact_active");
 
       var element = $(this).attr("data-contact");
       $("[data-conversation].active").removeClass("active");
@@ -12,6 +15,12 @@ $(document).ready(function () {
 
       $("conversation_user").removeClass("d_none");
       $("conversation_user").addClass("active");
+
+      var imgUser = $(".contact_active img").attr("src");
+      $(".access_user > img").attr("src", imgUser);
+
+      var userName = $(".contact_active h4").text();
+      $(".user_name").text(userName);
     }
   );
 
