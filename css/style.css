@@ -43,6 +43,10 @@ body{
   display: none;
 }
 
+.active{
+  display: block;
+}
+
 .bgcolor_grey{
   background-color: #E9EBEB;
 }

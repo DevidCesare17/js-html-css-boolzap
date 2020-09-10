@@ -4,17 +4,14 @@ $(document).ready(function () {
 
   $(".user_n_im_i").click(
     function () {
-      $(this).toggleClass("bgcolor_grey");
+      // $(this).toggleClass("bgcolor_grey");
 
-      switch ($(this).attr("data-contact")) {
-        case 0:
-          $(".conversation_user").attr("0").show();
-          break;
-        case 1:
-          $(".conversation_user").attr("1").show();
-        default:
+      var element = $(this).attr("data-contact");
+      $("[data-conversation].active").removeClass("active");
+      $("[data-conversation=" + eleNum + "]").addClass("active");
 
-      }
+      $("conversation_user").removeClass("d_none");
+      $("conversation_user").addClass("active");
     }
   );
 
