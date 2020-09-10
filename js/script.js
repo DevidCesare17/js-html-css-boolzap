@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-  // EFFETTO HOVER UTENTI
-
+  // EFFETTO CLICK LISTA UTENTI E SOSTITUZIONE SULLA CHAT
   $(".user_n_im_i").click(
     function () {
       $(".user_n_im_i").removeClass("bgcolor_grey");
@@ -23,10 +22,6 @@ $(document).ready(function () {
       $(".user_name").text(userName);
     }
   );
-
-
-
-
 
   // AL CLICK SULLA INPUT MSG VISUALIZZO "BUTTON" INVIO E RIMUOVO "BUTTON" MICROFONO
   $(".msg_wrtn").click(
