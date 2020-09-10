@@ -8,7 +8,7 @@ $(document).ready(function () {
 
       var element = $(this).attr("data-contact");
       $("[data-conversation].active").removeClass("active");
-      $("[data-conversation=" + eleNum + "]").addClass("active");
+      $("[data-conversation=" + element + "]").addClass("active");
 
       $("conversation_user").removeClass("d_none");
       $("conversation_user").addClass("active");
