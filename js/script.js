@@ -1,23 +1,26 @@
 $(document).ready(function () {
 
   // EFFETTO HOVER UTENTI
-  $(".user_n_im_i").hover(
+
+  $(".user_n_im_i").click(
     function () {
       $(this).toggleClass("bgcolor_grey");
+
+      switch ($(this).attr("data-contact")) {
+        case 0:
+          $(".conversation_user").attr("0").show();
+          break;
+        case 1:
+          $(".conversation_user").attr("1").show();
+        default:
+
+      }
     }
   );
 
 
-  // $(".user_n_im_i").click(
-  //   function () {
-  //     // var userImg = $(".name_user > img").clone();
-  //     // userImg.find(".user_info .img_user > img").text();
-  //
-  //     $(this).clone(".name_user_n_lastmsg > h4");
-  //     var userName = $(".name_user_n_lastmsg > h4");
-  //     userName.find(".user_is_writing .user_name").text($(this));
-  //   }
-  // );
+
+
 
   // AL CLICK SULLA INPUT MSG VISUALIZZO "BUTTON" INVIO E RIMUOVO "BUTTON" MICROFONO
   $(".msg_wrtn").click(
