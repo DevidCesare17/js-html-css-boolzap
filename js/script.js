@@ -107,7 +107,7 @@ $(document).ready(function () {
       templateMessage.find(".msg_text").text(inputUtente);
       templateMessage.find(".hour_send").text(time());
       templateMessage.find(".msg_msg").addClass("msg_green");
-      $(".chat").append(templateMessage);
+      $(".chat .active").append(templateMessage);
       $(".msg_wrtn").val("");
     }
   }
@@ -119,7 +119,7 @@ $(document).ready(function () {
     receiveMsg.find(".msg_text").text(answerUser);
     receiveMsg.find(".hour_send").text(time());
     receiveMsg.find(".msg_msg").addClass("msg_white");
-    $(".chat").append(receiveMsg);
+    $(".chat .active").append(receiveMsg);
     lastHour();
     miniMsg();
   }
@@ -138,13 +138,13 @@ $(document).ready(function () {
   }
 
   function lastHour () {
-    var lastHour = $(".hour_msg");
+    var lastHour = $(".contact_active .hour_msg");
     lastHour.find("small").text(time());
     return lastHour;
   }
 
   function miniMsg () {
-    var miniMsg = $(".name_user_n_lastmsg");
+    var miniMsg = $(".contact_active .name_user_n_lastmsg");
     miniMsg.find("p").text(answerUser);
     return miniMsg;
   }
