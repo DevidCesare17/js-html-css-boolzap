@@ -11,16 +11,17 @@ $(document).ready(function () {
       $(this).removeClass("bgcolor_grey");
     }
   );
-  // $(".user_n_im_i").click(
-  //   function () {
-  //     var userImg = $(".name_user > img").clone();
-  //     userImg.find(".user_info .img_user > img").text();
-  //
-  //     var nomeCopy = $("name_user_n_lastmsg > h4").text();
-  //     var userName = $(".user_info .img_user > .user_name").clone();
-  //     userName.find(".user_info .img_user > .user_name").text(nomeCopy);
-  //   }
-  // );
+
+  $(".user_n_im_i").click(
+    function () {
+      // var userImg = $(".name_user > img").clone();
+      // userImg.find(".user_info .img_user > img").text();
+
+      $(this).clone(".name_user_n_lastmsg > h4");
+      var userName = $(".name_user_n_lastmsg > h4");
+      userName.find(".user_is_writing .user_name").text($(this));
+    }
+  );
 
   // AL CLICK SULLA INPUT MSG VISUALIZZO "BUTTON" INVIO E RIMUOVO "BUTTON" MICROFONO
   $(".msg_wrtn").click(
@@ -57,15 +58,20 @@ $(document).ready(function () {
   // RICERCA UTENTI
   $(".input_searching").on("keyup",
     function () {
-      var valueSearch = $(".input_searching").val().toLowerCase();
+      var valueSearch = $(this).val().toLowerCase();
       $(".users_list .user_n_im_i").filter(
         function () {
-          $(this).toggle($(this).text().toLowerCase().indexOf(valueSearch) > -1)
+          $(this).toggle($(this).text().toLowerCase().indexOf(valueSearch) > 0  );
         });
     }
   );
 
-
+  // INFO O CANCELLA MESSAGGIO
+  $(".msg_msg").hover(
+    function () {
+      $(".info_delete_msg").toggle();
+    }
+  );
 
   // FUNCTIONS
     // function setting orario completo

@@ -281,4 +281,39 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 .msg_white{
   background-color: #ffffff;
 }
+
+.info_delete_msg{
+  position: absolute;
+  display: none;
+  font-size: 14px;
+  color: #6B7376;
+  right: 5%;
+  top: 30%;
+}
+
+.msg_info_list{
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.msg_info_list ul>li{
+  list-style: none;
+  font-size: 12px;
+}
+.msg_info_list ul>li:not(:last-child){
+  padding-bottom: 10px;
+}
+
+.msg_info_list ul>li>a{
+  text-decoration: none;
+}
 /* /TEMPLATE */
