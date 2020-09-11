@@ -5,8 +5,7 @@ $(document).ready(function () {
     function () {
       $(".user_n_im_i").removeClass("bgcolor_grey");
       $(this).addClass("bgcolor_grey");
-      $(".user_n_im_i").removeClass("contact_active");
-      $(this).addClass("contact_active");
+      
 
       var element = $(this).attr("data-contact");
       $("[data-conversation].active").removeClass("active");
@@ -15,10 +14,10 @@ $(document).ready(function () {
       $("conversation_user").removeClass("d_none");
       $("conversation_user").addClass("active");
 
-      var imgUser = $(".contact_active img").attr("src");
+      var imgUser = $(".bgcolor_grey img").attr("src");
       $(".access_user > img").attr("src", imgUser);
 
-      var userName = $(".contact_active h4").text();
+      var userName = $(".bgcolor_grey h4").text();
       $(".user_name").text(userName);
     }
   );
@@ -133,13 +132,13 @@ $(document).ready(function () {
   }
 
   function lastHour () {
-    var lastHour = $(".contact_active .hour_msg");
+    var lastHour = $(".bgcolor_grey .hour_msg");
     lastHour.find("small").text(time());
     return lastHour;
   }
 
   function miniMsg () {
-    var miniMsg = $(".contact_active .name_user_n_lastmsg");
+    var miniMsg = $(".bgcolor_grey .name_user_n_lastmsg");
     miniMsg.find("p").text(answerUser);
     return miniMsg;
   }
