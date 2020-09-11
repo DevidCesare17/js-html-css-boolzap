@@ -36,8 +36,16 @@ $(document).ready(function () {
   $(".fas.fa-paper-plane").click(
     function () {
       sendMessage();
+
+      var convAct = $(".chat .active").attr("data-conversation");
+
       setTimeout(isWriting, 1000);
-      setTimeout(receiveMessage, 2000);
+
+      setTimeout(
+        function () {
+          receiveMessage(convAct);
+        }, 2000);
+
       setTimeout(lastAccess, 2500);
       $(".fas.fa-microphone").removeClass("d_none");
       $(".fas.fa-paper-plane").addClass("d_none");
@@ -49,8 +57,16 @@ $(document).ready(function () {
     function(e) {
       if (e.which == 13) {
         sendMessage();
+
+        var convAct = $(".chat .active").attr("data-conversation");
+
         setTimeout(isWriting, 1000);
-        setTimeout(receiveMessage, 2000);
+
+        setTimeout(
+          function () {
+            receiveMessage(convAct);
+          }, 2000);
+
         setTimeout(lastAccess, 2500);
       }
     }
@@ -76,7 +92,7 @@ $(document).ready(function () {
 
   $(document).on("click", ".delete_msg_inst",
     function () {
-      $(this).parents(".msg_msg").remove();
+      $(this).parents(".msg_row").remove();
     }
   );
 
@@ -106,19 +122,19 @@ $(document).ready(function () {
       $(".chat .active").append(templateMessage);
 
       scrollMsg();
-      
+
       $(".msg_wrtn").val("");
     }
   }
 
     // function setting ricevi messaggio da parte dello user chat corrente
   var answerUser = "Ok";
-  function receiveMessage () {
+  function receiveMessage (varConvAct) {
     var receiveMsg = $(".templates .msg_row").clone();
     receiveMsg.find(".msg_text").text(answerUser);
     receiveMsg.find(".hour_send").text(time());
     receiveMsg.find(".msg_msg").addClass("msg_white");
-    $(".chat .active").append(receiveMsg);
+    $("[data-conversation=" + varConvAct + "]").append(receiveMsg);
 
     scrollMsg();
     lastHour();
@@ -138,18 +154,21 @@ $(document).ready(function () {
     lastAcss.find(".last_online").text("Ultimo accesso alle " + time());
   }
 
+    // function aggiunge orario ultimo messaggio lista contatti (contatto attivo)
   function lastHour () {
     var lastHour = $(".bgcolor_grey .hour_msg");
     lastHour.find("small").text(time());
     return lastHour;
   }
 
+    // function aggiunge ultimo messaggio lista contatti (contatto attivo)
   function miniMsg () {
     var miniMsg = $(".bgcolor_grey .name_user_n_lastmsg");
     miniMsg.find("p").text(answerUser);
     return miniMsg;
   }
 
+    // function scrollbar ultimo messaggio
   function scrollMsg () {
     var heightScrl = $(".conversation_user.active").prop("scrollHeight");
     $(".chat").scrollTop(heightScrl);
