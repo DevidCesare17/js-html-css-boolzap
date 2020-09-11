@@ -5,7 +5,7 @@ $(document).ready(function () {
     function () {
       $(".user_n_im_i").removeClass("bgcolor_grey");
       $(this).addClass("bgcolor_grey");
-      
+
 
       var element = $(this).attr("data-contact");
       $("[data-conversation].active").removeClass("active");
@@ -19,6 +19,8 @@ $(document).ready(function () {
 
       var userName = $(".bgcolor_grey h4").text();
       $(".user_name").text(userName);
+
+      scrollMsg();
     }
   );
 
@@ -102,6 +104,9 @@ $(document).ready(function () {
       templateMessage.find(".hour_send").text(time());
       templateMessage.find(".msg_msg").addClass("msg_green");
       $(".chat .active").append(templateMessage);
+
+      scrollMsg();
+      
       $(".msg_wrtn").val("");
     }
   }
@@ -114,6 +119,8 @@ $(document).ready(function () {
     receiveMsg.find(".hour_send").text(time());
     receiveMsg.find(".msg_msg").addClass("msg_white");
     $(".chat .active").append(receiveMsg);
+
+    scrollMsg();
     lastHour();
     miniMsg();
   }
@@ -141,6 +148,11 @@ $(document).ready(function () {
     var miniMsg = $(".bgcolor_grey .name_user_n_lastmsg");
     miniMsg.find("p").text(answerUser);
     return miniMsg;
+  }
+
+  function scrollMsg () {
+    var heightScrl = $(".conversation_user.active").prop("scrollHeight");
+    $(".chat").scrollTop(heightScrl);
   }
 
 });

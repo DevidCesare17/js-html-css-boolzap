@@ -273,7 +273,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .hour_send{
   position: absolute;
-  bottom: 5%;
+  bottom: 0;
   right: 5%;
   color: #6B7376;
   font-size: 10px;
